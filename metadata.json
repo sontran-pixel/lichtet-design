@@ -1,0 +1,6 @@
+{
+  "name": "Xưởng Lịch Tết — Thiết Kế & Đặt In Lịch Cá Nhân Hóa",
+  "description": "Ứng dụng thiết kế và đặt in lịch Tết Việt Nam để bàn và treo tường với Âm lịch chuẩn, mẫu thiết kế truyền thống và hiện đại, tùy chỉnh ảnh và thương hiệu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

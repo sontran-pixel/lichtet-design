@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(0.975 0.012 85);
+  --color-surface: oklch(0.998 0.003 85);
+  --color-foreground: oklch(0.20 0.035 25);
+  --color-muted: oklch(0.44 0.025 45);
+  --color-border: oklch(0.85 0.018 75);
+  --color-primary: oklch(0.46 0.20 25);
+  --color-primary-foreground: oklch(0.99 0.005 85);
+  --color-accent: oklch(0.70 0.14 75);
+  --color-accent-foreground: oklch(0.20 0.04 35);
+  --color-success: oklch(0.48 0.13 145);
+
+  --font-sans: "Source Sans 3", system-ui, -apple-system, sans-serif;
+  --font-display: "Newsreader", Georgia, serif;
+
+  --text-display: clamp(1.75rem, 1.25rem + 1.3vw, 2.45rem);
+  --text-display--line-height: 1.14;
+  --text-display--font-weight: 600;
+
+  --radius-card: 0.625rem;
+  --radius-control: 0.4rem;
+  --shadow-surface: 0 1px 3px oklch(0.20 0.035 25 / 0.06), 0 1px 2px oklch(0.20 0.035 25 / 0.04);
+}
+
+html {
+  font-synthesis-weight: none;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+}
+
+/* Subtle traditional Vietnamese paper grain texture */
+body {
+  background-image: radial-gradient(rgba(180, 83, 9, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.80 0.02 75);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.65 0.03 65);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *:not(.animate-spin):not(.animate-pulse),
+  *:not(.animate-spin):not(.animate-pulse)::before,
+  *:not(.animate-spin):not(.animate-pulse)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
